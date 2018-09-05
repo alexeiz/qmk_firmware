@@ -6,6 +6,12 @@ Original can be found at [https://github.com/qmk/qmk_firmware](https://github.co
 
 ### S60X
 
-```shell
+``` shell
 $ make s60_x/rgb:my_keymap                                                                                                            ✭
+```
+
+### Satan
+
+``` shell
+$ make satan:my_keymap                                                                                                                ✭
 ```
