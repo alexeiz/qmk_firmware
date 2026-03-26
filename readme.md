@@ -7,7 +7,7 @@ Original can be found at [https://github.com/qmk/qmk_firmware](https://github.co
 Fedora:
 
 ``` shell
-$ sudo dnf install avr-gcc avr-libc dfu-programmer
+$ sudo dnf install avr-gcc avr-libc avrdude
 ```
 
 ## Build
@@ -28,6 +28,20 @@ $ make satan:my_keymap
 
 ``` shell
 $ make 1upkeyboards/1up60hse:my_keymap
+```
+
+### FC660C
+
+``` shell
+vim keyboards/fc660c/keymaps/my_keymap/keymap.c
+make fc660c:my_keymap
+
+# flash
+# press/hold reset button
+
+sudo avrdude -c flip1 -p m32u4 -U flash:w:fc660c_my_keymap.hex:i
+
+# unplug/plug-in keyboard
 ```
 
 ## Flash
